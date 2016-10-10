@@ -13,3 +13,7 @@ This simple script is developed for PDP course in Northeastern University.
 This script will only generate dot language script, please install Graphviz(http://www.graphviz.org/) or other compiler to generate readable graph.
 
 The dot script is not optimized, please use `unflatten`, provided by Graphviz, to minimize the size of graph.
+
+## Contribution
+
+Contribution is welcomed.
