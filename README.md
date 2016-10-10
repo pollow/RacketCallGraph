@@ -14,6 +14,11 @@ This script will only generate dot language script, please install Graphviz(http
 
 The dot script is not optimized, please use `unflatten`, provided by Graphviz, to minimize the size of graph.
 
+One line command usage:
+
+```
+>> python3 call_graph.py your_proram.rkt && unflatten -l3 callgraph.dot | dot -Tjpg -o graph.jpg
+
 ## Contribution
 
 Contribution is welcomed.
