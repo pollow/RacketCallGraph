@@ -34,7 +34,9 @@ def main():
             if not st: # stack is empty, got an complete expression
                 if funname is not None: # find a function define
                     funstr = s[s.find(')', tmp)+1: i].strip()
-                    d.append((funname, set(re.findall('[^\s\(\)]+', funstr))))
+                    print(funname + ": ")
+                    print(set(re.findall('[^\s\(\)\[\]]+', funstr)))
+                    d.append((funname, set(re.findall('[^\s\(\)\[\]]+', funstr))))
                     funname = None
         else:
             fundef = False # next keyword of define is not `(`
