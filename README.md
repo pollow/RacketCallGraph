@@ -16,8 +16,9 @@ The dot script is not optimized, please use `unflatten`, provided by Graphviz, t
 
 One line command usage:
 
-```
+```sh
 >> python3 call_graph.py your_proram.rkt && unflatten -l3 callgraph.dot | dot -Tjpg -o graph.jpg
+```
 
 ## Contribution
 
