@@ -9,6 +9,34 @@ def main():
 
     s = " ".join(line)
 
+    # process block comment
+    while True:
+        l = s.find("#|")
+        if l != -1 :
+            r = s.find("|#")
+            s = s[:l] + s[r+2:]
+        else:
+            break
+
+    # process function comment
+    while True:
+        l = s.find("#;")
+        if l != -1:
+            r = l + 2
+            stack = []
+            while r < len(s):
+                if s[r] == '(':
+                    stack.append(s[r])
+                elif s[r] == ')':
+                    stack.pop()
+                    if not stack:
+                        break;
+                r += 1
+
+            s = s[:l] + s[r+1:]
+        else:
+            break
+
     st = []
     main = False
     fundef = False
