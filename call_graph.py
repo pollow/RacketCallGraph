@@ -37,6 +37,15 @@ def main():
         else:
             break
 
+    # remove all string 
+    while True:
+        l = s.find("\"")
+        if l != -1 :
+            r = s.find("\"", l + 1)
+            s = s[:l] + s[r+1:]
+        else:
+            break
+
     st = []
     main = False
     fundef = False
